@@ -1,7 +1,6 @@
 baseURL = "https://example.org/"
 languageCode = "en-us"
 title = "Hugo Minimum Working Example (MWE)"
-theme = "test-theme"
 
 # Remove files from destination not found in static directories
 cleandestinationdir = true

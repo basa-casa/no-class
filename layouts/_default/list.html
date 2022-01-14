@@ -4,7 +4,10 @@
 
 <ul>
     {{ range .RegularPages }}
-        {{ .Render "li" }}
+        <li>
+            <a href='{{ .Permalink }}'> {{ .Title }}</a>
+            {{ .Description | markdownify }}
+        </li>
     {{ end }}
 </ul>
 
