@@ -2,6 +2,10 @@
   [context.production.environment]
     HUGO_BASEURL = "https://hugo-mwe.netlify.com/"
 
+[context.branch-deploy]
+  [context.branch-deploy.environment]
+    HUGO_BASEURL = "${DEPLOY_PRIME_URL}/"
+
 [context.deploy-preview]
   [context.deploy-preview.environment]
     HUGO_BASEURL = "${DEPLOY_PRIME_URL}/"
