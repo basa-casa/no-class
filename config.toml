@@ -21,3 +21,6 @@ disableFastRender = true
 
 [Params]
   mainSections = ["posts", "notes"]
+
+  [Params.source]
+    url = "https://gitlab.com/hugo-mwe/hugo-mwe" # Mandatory

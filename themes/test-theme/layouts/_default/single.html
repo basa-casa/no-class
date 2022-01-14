@@ -7,3 +7,19 @@
 {{ end }}
 
 {{ end }}
+
+{{ define "footer" }}
+
+{{ $page := .Page }}
+
+{{ with .File }}
+    {{ with .Path }}
+        {{ $path := . }}
+        {{ with site.Params.source }}
+            {{ $md_dir := .md_dir | default "content" }}
+            ✱ <i>Markdown <a href="{{ .url }}/-/raw/{{ (or ($page.Param "branch") (.default_branch | default "main")) }}/{{ $md_dir }}/{{ $path }}"> source</a> of this page</i>
+        {{ end }}
+    {{ end }}
+{{ end }}
+
+{{ end }}
