@@ -1,5 +1,6 @@
 #+hugo_base_dir: ../.
 #+options: author:nil
+#+macro: hugoissue [[https://github.com/gohugoio/hugo/issues/$1][Hugo Issue # $1]]
 
 * Hello
 :PROPERTIES:
