@@ -1,0 +1,13 @@
+{{ define "main" }}
+
+{{ with .Content }}
+    {{ . }}
+{{ end }}
+
+<h2>List of posts</h2>
+
+{{ range site.RegularPages.ByLastmod.Reverse }}
+    {{ .Render "summary"}}
+{{ end }}
+
+{{ end }}

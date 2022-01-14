@@ -1,0 +1,13 @@
+{{ define "main" }}
+
+<ul>
+    {{ range .RegularPages }}
+        {{ .Render "li" }}
+    {{ end }}
+</ul>
+
+{{ with .Content }}
+    {{ . }}
+{{ end }}
+
+{{ end }}
