@@ -10,6 +10,8 @@ enableEmoji = true
 
 disableFastRender = true
 
+enableGitInfo = true
+
 [markup]
   [markup.highlight]
     codeFences = true # default = true

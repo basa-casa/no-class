@@ -17,6 +17,20 @@
 {{ define "footer" }}
 
 {{ $page := .Page }}
+{{ $commit := .GitInfo.Hash }}
+
+{{ with site.Params.source }}
+    {{ $url := .url }}
+    {{ $url_splits := path.Split $url }}
+    <h3>To reproduce this page/issue</h3>
+    <pre>
+git clone {{ $url }}
+cd {{ $url_splits.File }}
+git checkout {{ $commit }}
+./srv.sh
+    </pre>
+    <hr>
+{{ end }}
 
 {{ with .File }}
     {{ with .Path }}
