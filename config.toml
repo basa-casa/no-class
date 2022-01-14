@@ -5,11 +5,8 @@ theme = "test-theme"
 
 # Remove files from destination not found in static directories
 cleandestinationdir = true
-
 enableEmoji = true
-
 disableFastRender = true
-
 enableGitInfo = true
 
 [markup]
@@ -22,7 +19,7 @@ enableGitInfo = true
       unsafe = true
 
 [Params]
-  mainSections = ["posts", "notes"]
+  mainSections = ["posts"]
 
   [Params.source]
     url = "https://gitlab.com/hugo-mwe/hugo-mwe" # Mandatory
