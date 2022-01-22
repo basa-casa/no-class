@@ -8,6 +8,10 @@ enableEmoji = true
 disableFastRender = true
 enableGitInfo = true
 
+[module]
+  [[module.imports]]
+    path = "gitlab.com/kaushalmodi/hugo-mwe-theme"
+
 [markup]
   [markup.highlight]
     codeFences = true # default = true
