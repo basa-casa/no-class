@@ -5,7 +5,7 @@
 
 port="${1:-2222}" # default
 
-hugo server \
-     --buildDrafts \
-     --navigateToChanged \
-     --port "${port}"
+HUGO_MODULE_REPLACEMENTS="gitlab.com/kaushalmodi/hugo-mwe-theme -> ../hugo-mwe-theme" hugo server \
+                        --buildDrafts \
+                        --navigateToChanged \
+                        --port "${port}"
