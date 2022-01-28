@@ -5,9 +5,21 @@
 
 port="${1:-2222}" # default
 
-HUGO_THEMESDIR="$(pwd)/../" \
-              HUGO_MODULE_REPLACEMENTS="gitlab.com/kaushalmodi/hugo-mwe-theme -> hugo-mwe-theme" \
-              hugo server \
-              --buildDrafts \
-              --navigateToChanged \
-              --port "${port}"
+# https://discourse.gohugo.io/t/replace-in-go-mod-works-but-hugo-module-replacements-env-var-doesnt-work/36746/10?u=kaushalmodi
+mod_base_dir=".."
+mods_to_be_replaced=("gitlab.com/kaushalmodi/hugo-mwe-theme")
+
+sed -i '/replace .* =>/d' go.mod
+for mod in "${mods_to_be_replaced[@]}"
+do
+    echo "replace ${mod} => ${mod_base_dir}/$(basename "${mod}")" >> go.mod
+done
+
+echo "Hugo Module Graph:"
+hugo mod graph
+
+hugo server \
+     --buildDrafts \
+     --buildFuture \
+     --navigateToChanged \
+     --port "${port}"
