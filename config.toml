@@ -9,10 +9,6 @@ disableFastRender = true
 enableGitInfo = true
 
 [markup]
-  [markup.highlight]
-    codeFences = true # default = true
-    noClasses = false # default = true
-
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
