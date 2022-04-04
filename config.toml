@@ -1,6 +1,6 @@
 baseURL = "https://example.org/"
 languageCode = "en-us"
-title = "Hugo MWE"
+title = "Hugo site with Mataroa theme"
 
 # Remove files from destination not found in static directories
 cleandestinationdir = true
@@ -10,7 +10,25 @@ enableGitInfo = true
 
 [module]
   [[module.imports]]
-    path = "gitlab.com/kaushalmodi/hugo-mwe-theme"
+    path = "github.com/sirodoht/mataroa"
+  # https://github.com/sirodoht/mataroa/blob/38e588ae3a11282e6c1fa9f911301ce5e41d5521/export_base_hugo/baseof.html
+  # is 2 years old and has some now-invalid syntax. So the baseof.html is copied and fixed in
+  # layouts/_default/baseof.html.
+  # [[module.imports.mounts]]
+  #   source = 'export_base_hugo/baseof.html'
+  #   target = 'layouts/_default/baseof.html'
+  [[module.imports.mounts]]
+    source = 'export_base_hugo/index.html'
+    target = 'layouts/_default/index.html'
+  [[module.imports.mounts]]
+    source = 'export_base_hugo/list.html'
+    target = 'layouts/_default/list.html'
+  [[module.imports.mounts]]
+    source = 'export_base_hugo/single.html'
+    target = 'layouts/_default/single.html'
+  [[module.imports.mounts]]
+    source = 'main/static/style.css'
+    target = 'assets/css/style.css'
 
 [markup]
   [markup.goldmark]

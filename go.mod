@@ -2,4 +2,6 @@ module gitlab.com/kaushalmodi/hugo_mwe
 
 go 1.16
 
-require gitlab.com/kaushalmodi/hugo-mwe-theme v0.1.1 // indirect
+require (
+	github.com/sirodoht/mataroa v0.0.0-20220404164202-38e588ae3a11 // indirect
+)
