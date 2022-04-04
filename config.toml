@@ -13,10 +13,6 @@ enableGitInfo = true
     path = "gitlab.com/kaushalmodi/hugo-mwe-theme"
 
 [markup]
-  [markup.highlight]
-    codeFences = true # default = true
-    noClasses = false # default = true
-
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
