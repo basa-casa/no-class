@@ -1,6 +1,447 @@
 #+hugo_base_dir: ../.
 #+options: author:nil
-#+macro: hugoissue [[https://github.com/gohugoio/hugo/issues/$1][Hugo Issue # $1]]
+
+#+macro: top @@html:<a href="#top">⇑top</a>@@
+
+* Classless CSS Demo Page                                :demo:classless:css:
+:PROPERTIES:
+:EXPORT_FILE_NAME: classless-css-demo
+:EXPORT_OPTIONS:  toc:t num:t H:6
+:EXPORT_HUGO_USE_CODE_FOR_KBD: t
+:END:
+<<.top>>
+** Text
+*** Headings
+- The title of this post is heading level 1
+  - /Using more than one =<h1>= is allowed by the HTML spec, but is not
+    the best practice./ -- [[https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements#multiple_h1_elements_on_one_page][ref]]
+- [[*Text]] is heading level 2
+- [[*Headings]] is heading level 3
+**** Heading 4
+***** Heading 5
+****** Heading 6
+{{{top}}}
+*** Paragraphs
+A paragraph (from the Greek paragraphos, "to write beside" or "written
+beside") is a self-contained unit of a discourse in writing dealing
+with a particular point or idea. A paragraph consists of one or more
+sentences. Though not required by the syntax of any language,
+paragraphs are usually an expected part of formal writing, used to
+organize longer prose.
+
+{{{top}}}
+*** Blockquotes
+#+begin_quote
+A block quotation (also known as a long quotation or extract) is a
+quotation in a written document, that is set off from the main text as
+a paragraph, or block of text.
+
+It is typically distinguished visually using indentation and a
+different typeface or smaller size quotation. It may or may not
+include a citation, usually placed at the bottom.
+
+#+begin_cite
+[[/][Said no one, ever.]]
+#+end_cite
+#+end_quote
+
+{{{top}}}
+*** Asides
+#+begin_aside
+An aside is a portion of the document whose content is only indirectly
+related to the document's main content.
+
+It is typically presented as a sidebar or a call-out box.
+#+end_aside
+
+{{{top}}}
+*** Lists
+**** Definition list
+- Definition List Title :: This is a definition list division.
+**** Ordered List
+1. List Item 1
+2. List Item 2
+3. List Item 3
+**** Unordered List
+- List Item 1
+- List Item 2
+- List Item 3
+
+{{{top}}}
+*** Horizontal rules
+-----
+
+{{{top}}}
+*** Tabular data
+
+#+name: tab__table_example
+#+caption: Table Caption
+|-----------------+-----------------+-----------------+-----------------+-----------------|
+| Table Heading 1 | Table Heading 2 | Table Heading 3 | Table Heading 4 | Table Heading 5 |
+|-----------------+-----------------+-----------------+-----------------+-----------------|
+| Table Cell 1    | Table Cell 2    | Table Cell 3    | Table Cell 4    | Table Cell 5    |
+| Table Cell 1    | Table Cell 2    | Table Cell 3    | Table Cell 4    | Table Cell 5    |
+| Table Cell 1    | Table Cell 2    | Table Cell 3    | Table Cell 4    | Table Cell 5    |
+| Table Cell 1    | Table Cell 2    | Table Cell 3    | Table Cell 4    | Table Cell 5    |
+|-----------------+-----------------+-----------------+-----------------+-----------------|
+
+- Note :: =ox-hugo= (or CommonMark) doesn't support exporting Markdown
+  table's last element to HTML =<tfoot>=.
+
+{{{top}}}
+*** Code
+*Keyboard input:* ~Cmd~
+
+*Inline code:* =<div>code</div>=
+
+*Sample output:* @@html:<samp>This is sample output from a computer program.</samp>@@
+**** Pre-formatted text
+#+begin_example
+P R E F O R M A T T E D T E X T
+! " # $ % &amp; ' ( ) * + , - . /
+0 1 2 3 4 5 6 7 8 9 : ; &lt; = &gt; ?
+@ A B C D E F G H I J K L M N O
+P Q R S T U V W X Y Z [ \ ] ^ _
+` a b c d e f g h i j k l m n o
+p q r s t u v w x y z { | } ~
+#+end_example
+
+{{{top}}}
+*** Inline elements
+[[/][This is a text link]].
+
+*Strong is used to indicate strong importance.*
+
+/This text has added emphasis./
+
+The @@html:<b>b element</b>@@ is stylistically different text from
+normal text, without any special importance.
+
+The @@html:<i>i element</i>@@ is text that is offset from the normal
+text.
+
+The
+#+header: :trim-pre t :trim-post t
+#+begin_u
+u element
+#+end_u
+is text with an unarticulated, though explicitly rendered, non-textual
+annotation.
+
+#+header: :trim-pre nil :trim-post t
+#+begin_del
+This text is deleted
+#+end_del
+and
+#+header: :trim-pre t :trim-post t
+#+begin_ins
+This text is inserted
+#+end_ins
+.
+
++This text has a strikethrough+.
+
+Superscript^{®}.
+
+Subscript for things like H_{2}O.
+
+#+begin_small
+This small text is small for fine print, etc.
+#+end_small
+
+#+macro: abbr @@html:<abbr title="$2">$1</abbr>@@
+Abbreviation: {{{abbr(HTML,HyperText Markup Language)}}}
+
+#+attr_html: :cite https://developer.mozilla.org/en-US/docs/HTML/Element/q
+#+begin_q
+This text is a short inline quotation.
+#+end_q
+
+#+begin_cite
+This is a citation.
+#+end_cite
+
+The
+#+header: :trim-pre t :trim-post t
+#+begin_dfn
+dfn element
+#+end_dfn
+indicates a definition.
+
+The
+#+begin_mark
+mark element
+#+end_mark
+indicates a highlight.
+
+#+macro: var @@html:<var>$1</var>@@
+The {{{var(variable element)}}}, such as {{{var(x)}}} = {{{var(y)}}}.
+
+The time element:
+#+header: :trim-pre t :trim-post nil
+#+attr_html: :datetime 2013-04-06T12:32+00:00
+#+begin_time
+2 weeks ago
+#+end_time
+
+{{{top}}}
+*** HTML Comments
+There is comment here: @@html:<!--This comment should not be displayed-->@@
+
+There is a comment spanning multiple tags and lines below here.
+
+#+begin_export html
+<!--
+<p><a href="#!">This is a text link. But it should not be displayed in a comment</a>.</p>
+<p><strong>Strong is used to indicate strong importance. But, it should not be displayed in a comment</strong></p>
+<p><em>This text has added emphasis. But, it should not be displayed in a comment</em></p>-->
+#+end_export
+
+{{{top}}}
+** Embedded Content
+*** Images
+**** No =<figure>= element
+#+begin_export html
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Cute_grey_kitten.jpg"
+     alt="Image alt text" width="200px">
+#+end_export
+**** Wrapped in a =<figure>= element, no =<figcaption>=
+#+name: fig__kitten2
+#+attr_html: :alt Image alt text :width 200px
+[[https://upload.wikimedia.org/wikipedia/commons/7/75/Cute_grey_kitten.jpg]]
+**** Wrapped in a =<figure>= element, with a =<figcaption>=
+#+name: fig__kitten3
+#+caption: Here is a caption for this image.
+#+attr_html: :alt Image alt text :width 200px
+[[https://upload.wikimedia.org/wikipedia/commons/7/75/Cute_grey_kitten.jpg]]
+
+{{{top}}}
+*** Audio
+#+attr_html: :controls ""
+#+begin_audio
+audio
+#+end_audio
+
+{{{top}}}
+*** Video
+#+attr_html: :controls ""
+#+begin_video
+video
+#+end_video
+
+{{{top}}}
+*** Canvas
+#+begin_canvas
+canvas
+#+end_canvas
+
+{{{top}}}
+*** Meter
+#+attr_html: :value 2 :min 0 :max 10
+#+begin_meter
+2 out of 10
+#+end_meter
+
+{{{top}}}
+*** Progress
+#+begin_progress
+progress
+#+end_progress
+
+{{{top}}}
+*** Inline SVG
+#+begin_export html
+<svg width="100px" height="100px">
+  <circle cx="100" cy="100" r="100" fill="#1fa3ec"></circle>
+</svg>
+#+end_export
+
+{{{top}}}
+*** IFrames
+#+begin_export html
+<iframe src="index.html" height="300"></iframe>
+#+end_export
+
+{{{top}}}
+** Form Elements
+*** Input fields
+#+begin_export html
+<form>
+    <fieldset id="forms__input">
+        <legend>Input fields</legend>
+        <p>
+            <label for="input__text">Text Input</label>
+            <input id="input__text" type="text" placeholder="Text Input">
+        </p>
+        <p>
+            <label for="input__password">Password</label>
+            <input id="input__password" type="password" placeholder="Type your Password">
+        </p>
+        <p>
+            <label for="input__webaddress">Web Address</label>
+            <input id="input__webaddress" type="url" placeholder="http://yoursite.com">
+        </p>
+        <p>
+            <label for="input__emailaddress">Email Address</label>
+            <input id="input__emailaddress" type="email" placeholder="name@email.com">
+        </p>
+        <p>
+            <label for="input__phone">Phone Number</label>
+            <input id="input__phone" type="tel" placeholder="(999) 999-9999">
+        </p>
+        <p>
+            <label for="input__search">Search</label>
+            <input id="input__search" type="search" placeholder="Enter Search Term">
+        </p>
+        <p>
+            <label for="input__text2">Number Input</label>
+            <input id="input__text2" type="number" placeholder="Enter a Number">
+        </p>
+        <p>
+            <label for="input__text3" class="error">Error</label>
+            <input id="input__text3" class="is-error" type="text" placeholder="Text Input">
+        </p>
+        <p>
+            <label for="input__text4" class="valid">Valid</label>
+            <input id="input__text4" class="is-valid" type="text" placeholder="Text Input">
+        </p>
+    </fieldset>
+</form>
+#+end_export
+
+{{{top}}}
+*** Select menus
+#+begin_export html
+<form>
+    <fieldset id="forms__select">
+        <legend>Select menus</legend>
+        <p>
+            <label for="select">Select</label>
+            <select id="select">
+                <optgroup label="Option Group">
+                    <option>Option One</option>
+                    <option>Option Two</option>
+                    <option>Option Three</option>
+                </optgroup>
+            </select>
+        </p>
+    </fieldset>
+</form>
+#+end_export
+
+{{{top}}}
+*** Checkboxes
+#+begin_export html
+<form>
+    <fieldset id="forms__checkbox">
+        <legend>Checkboxes</legend>
+        <ul class="list list--bare">
+            <li><label for="checkbox1"><input id="checkbox1" name="checkbox" type="checkbox" checked="checked"> Choice A</label></li>
+            <li><label for="checkbox2"><input id="checkbox2" name="checkbox" type="checkbox"> Choice B</label></li>
+            <li><label for="checkbox3"><input id="checkbox3" name="checkbox" type="checkbox"> Choice C</label></li>
+        </ul>
+    </fieldset>
+</form>
+#+end_export
+
+{{{top}}}
+*** Radio buttons
+#+begin_export html
+<form>
+    <fieldset id="forms__radio">
+        <legend>Radio buttons</legend>
+        <ul class="list list--bare">
+            <li><label for="radio1"><input id="radio1" name="radio" type="radio" class="radio" checked="checked"> Option 1</label></li>
+            <li><label for="radio2"><input id="radio2" name="radio" type="radio" class="radio"> Option 2</label></li>
+            <li><label for="radio3"><input id="radio3" name="radio" type="radio" class="radio"> Option 3</label></li>
+        </ul>
+    </fieldset>
+</form>
+#+end_export
+**** Org mode checklist
+- [X] Option 1
+- [ ] Option 2
+- [ ] Option 3
+
+{{{top}}}
+*** Textareas
+#+begin_export html
+<form>
+    <fieldset id="forms__textareas">
+        <legend>Textareas</legend>
+        <p>
+            <label for="textarea">Textarea</label>
+            <textarea id="textarea" rows="8" cols="48" placeholder="Enter your message here"></textarea>
+        </p>
+    </fieldset>
+</form>
+#+end_export
+
+{{{top}}}
+*** HTML5 inputs
+#+begin_export html
+<form>
+    <fieldset id="forms__html5">
+        <legend>HTML5 inputs</legend>
+        <p>
+            <label for="ic">Color input</label>
+            <input type="color" id="ic" value="#000000">
+        </p>
+        <p>
+            <label for="in">Number input</label>
+            <input type="number" id="in" min="0" max="10" value="5">
+        </p>
+        <p>
+            <label for="ir">Range input</label>
+            <input type="range" id="ir" value="10">
+        </p>
+        <p>
+            <label for="idd">Date input</label>
+            <input type="date" id="idd" value="1970-01-01">
+        </p>
+        <p>
+            <label for="idm">Month input</label>
+            <input type="month" id="idm" value="1970-01">
+        </p>
+        <p>
+            <label for="idw">Week input</label>
+            <input type="week" id="idw" value="1970-W01">
+        </p>
+        <p>
+            <label for="idt">Datetime input</label>
+            <input type="datetime" id="idt" value="1970-01-01T00:00:00Z">
+        </p>
+        <p>
+            <label for="idtl">Datetime-local input</label>
+            <input type="datetime-local" id="idtl" value="1970-01-01T00:00">
+        </p>
+    </fieldset>
+</form>
+#+end_export
+
+{{{top}}}
+*** Action buttons
+#+begin_export html
+<form>
+    <fieldset id="forms__action">
+        <legend>Action buttons</legend>
+        <p>
+            <input type="submit" value="<input type=submit>">
+            <input type="button" value="<input type=button>">
+            <input type="reset" value="<input type=reset>">
+            <input type="submit" value="<input disabled>" disabled>
+        </p>
+        <p>
+            <button type="submit">&lt;button type=submit&gt;</button>
+            <button type="button">&lt;button type=button&gt;</button>
+            <button type="reset">&lt;button type=reset&gt;</button>
+            <button type="button" disabled>&lt;button disabled&gt;</button>
+        </p>
+    </fieldset>
+</form>
+#+end_export
+
+{{{top}}}
 
 * Hello
 :PROPERTIES:
