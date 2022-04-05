@@ -8,20 +8,12 @@ enableEmoji = true
 disableFastRender = true
 enableGitInfo = true
 
-[module]
-  # bettermotherfuckingwebsite.com
-  [[module.mounts]]
-    source = 'assets-src/css/bmfw.css'
-    target = 'assets/css/style.css'
-
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
 
 [Params]
-  subTitle = "Minimum working examples for testing out Hugo issues and features"
   mainSections = ["posts"]
 
-  [Params.source]
-    url = "https://gitlab.com/hugo-mwe/hugo-mwe" # Mandatory
+  # css = "bmfw.css" # default = "bmfw.css"
