@@ -1,6 +1,6 @@
 baseURL = "https://example.org/"
 languageCode = "en-us"
-title = "Hugo site with Mataroa theme"
+title = "Hugo site with Classless theme"
 
 # Remove files from destination not found in static directories
 cleandestinationdir = true
@@ -9,10 +9,9 @@ disableFastRender = true
 enableGitInfo = true
 
 [module]
-  [[module.imports]]
-    path = "github.com/sirodoht/mataroa"
-  [[module.imports.mounts]]
-    source = 'main/static/style.css'
+  # bettermotherfuckingwebsite.com
+  [[module.mounts]]
+    source = 'assets-src/css/bmfw.css'
     target = 'assets/css/style.css'
 
 [markup]
