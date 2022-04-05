@@ -13,6 +13,7 @@
 - [[https://classless-newcss--hugo-mwe.netlify.app/posts/classless-css-demo/][new.css]] -- [[https://github.com/xz/new.css][Source]]
 - [[https://classless-sakura--hugo-mwe.netlify.app/posts/classless-css-demo/][sakura]] -- [[https://github.com/oxalorg/sakura][Source]]
 - [[https://classless-mvp--hugo-mwe.netlify.app/posts/classless-css-demo/][mvp]] -- [[https://github.com/andybrewer/mvp][Source]]
+- [[https://classless-water--hugo-mwe.netlify.app/posts/classless-css-demo/][water]] -- [[https://github.com/kognise/water.css][Source]]
 * Classless CSS Demo Page                                :demo:classless:css:
 :PROPERTIES:
 :EXPORT_FILE_NAME: classless-css-demo
