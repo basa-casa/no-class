@@ -9,7 +9,7 @@ draft = false
     list-style: none;
   }
 </style>
-<div class="ox-hugo-toc toc">
+<nav class="ox-hugo-toc toc">
 
 <div class="heading">Table of Contents</div>
 
@@ -53,7 +53,7 @@ draft = false
     - <span class="section-num">3.6</span> [HTML5 inputs](#html5-inputs)
     - <span class="section-num">3.7</span> [Action buttons](#action-buttons)
 
-</div>
+</nav>
 <!--endtoc-->
 
 
