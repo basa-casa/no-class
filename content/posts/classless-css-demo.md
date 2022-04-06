@@ -4,12 +4,7 @@ tags = ["demo", "classless", "css"]
 draft = false
 +++
 
-<style>
-  .ox-hugo-toc ul {
-    list-style: none;
-  }
-</style>
-<nav class="ox-hugo-toc toc">
+<nav class="ox-hugo-toc toc has-section-numbers">
 
 <div class="heading">Table of Contents</div>
 
