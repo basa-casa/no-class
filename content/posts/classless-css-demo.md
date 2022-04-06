@@ -56,8 +56,6 @@ draft = false
 </div>
 <!--endtoc-->
 
-<span class="org-target" id="top"></span>
-
 
 ## <span class="section-num">1</span> Text {#text}
 
@@ -159,7 +157,7 @@ Definition List Title
 
 <a id="table--table-example"></a>
 <div class="table-caption">
-  <span class="table-number"><a href="#table--table-example">Table 1</a></span>:
+  <span class="table-number"><a href="#table--table-example">Table 1</a>:</span>
   Table Caption
 </div>
 

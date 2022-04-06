@@ -22,7 +22,6 @@
 :EXPORT_OPTIONS:  toc:t num:t H:6
 :EXPORT_HUGO_USE_CODE_FOR_KBD: t
 :END:
-<<.top>>
 ** Text
 *** Headings
 - The title of this post is heading level 1
