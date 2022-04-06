@@ -4,7 +4,7 @@ tags = ["demo", "classless", "css"]
 draft = false
 +++
 
-<nav class="ox-hugo-toc toc has-section-numbers">
+<div class="ox-hugo-toc toc has-section-numbers">
 
 <div class="heading">Table of Contents</div>
 
@@ -48,7 +48,7 @@ draft = false
     - <span class="section-num">3.6</span> [HTML5 inputs](#html5-inputs)
     - <span class="section-num">3.7</span> [Action buttons](#action-buttons)
 
-</nav>
+</div>
 <!--endtoc-->
 
 
