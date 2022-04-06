@@ -215,16 +215,16 @@ There is a comment spanning multiple tags and lines below here.
 **** No =<figure>= element
 #+begin_export html
 <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Cute_grey_kitten.jpg"
-     alt="Image alt text" width="200px">
+     alt="Image alt text" width="200">
 #+end_export
 **** Wrapped in a =<figure>= element, no =<figcaption>=
 #+name: fig__kitten2
-#+attr_html: :alt Image alt text :width 200px
+#+attr_html: :alt Image alt text :width 200
 [[https://upload.wikimedia.org/wikipedia/commons/7/75/Cute_grey_kitten.jpg]]
 **** Wrapped in a =<figure>= element, with a =<figcaption>=
 #+name: fig__kitten3
 #+caption: Here is a caption for this image.
-#+attr_html: :alt Image alt text :width 200px
+#+attr_html: :alt Image alt text :width 200
 [[https://upload.wikimedia.org/wikipedia/commons/7/75/Cute_grey_kitten.jpg]]
 
 {{{top}}}

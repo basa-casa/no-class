@@ -271,21 +271,21 @@ There is a comment spanning multiple tags and lines below here.
 #### <span class="section-num">2.1.1</span> No `<figure>` element {#no-figure-element}
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Cute_grey_kitten.jpg"
-     alt="Image alt text" width="200px">
+     alt="Image alt text" width="200">
 
 
 #### <span class="section-num">2.1.2</span> Wrapped in a `<figure>` element, no `<figcaption>` {#wrapped-in-a-figure-element-no-figcaption}
 
 <a id="figure--kitten2"></a>
 
-{{< figure src="https://upload.wikimedia.org/wikipedia/commons/7/75/Cute_grey_kitten.jpg" alt="Image alt text" width="200px" >}}
+{{< figure src="https://upload.wikimedia.org/wikipedia/commons/7/75/Cute_grey_kitten.jpg" alt="Image alt text" width="200" >}}
 
 
 #### <span class="section-num">2.1.3</span> Wrapped in a `<figure>` element, with a `<figcaption>` {#wrapped-in-a-figure-element-with-a-figcaption}
 
 <a id="figure--kitten3"></a>
 
-{{< figure src="https://upload.wikimedia.org/wikipedia/commons/7/75/Cute_grey_kitten.jpg" alt="Image alt text" caption="<span class=\"figure-number\">Figure 1: </span>Here is a caption for this image." width="200px" >}}
+{{< figure src="https://upload.wikimedia.org/wikipedia/commons/7/75/Cute_grey_kitten.jpg" alt="Image alt text" caption="<span class=\"figure-number\">Figure 1: </span>Here is a caption for this image." width="200" >}}
 
 <a href="#top">⇑top</a>
 
