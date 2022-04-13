@@ -9,12 +9,12 @@
 :EXPORT_HUGO_SECTION: /
 :END:
 ** Demo of various classless CSS libraries
-- [[https://classless-bmfw--hugo-mwe.netlify.app/posts/classless-css-demo/][bettermotherf***ingwebsite]] -- [[http://bettermotherfuckingwebsite.com/][Source]]
-- [[https://classless-newcss--hugo-mwe.netlify.app/posts/classless-css-demo/][new.css]] -- [[https://github.com/xz/new.css][Source]]
-- [[https://classless-sakura--hugo-mwe.netlify.app/posts/classless-css-demo/][sakura]] -- [[https://github.com/oxalorg/sakura][Source]]
-- [[https://classless-mvp--hugo-mwe.netlify.app/posts/classless-css-demo/][mvp]] -- [[https://github.com/andybrewer/mvp][Source]]
-- [[https://classless-water--hugo-mwe.netlify.app/posts/classless-css-demo/][water]] -- [[https://github.com/kognise/water.css][Source]]
-- [[https://classless-simple--hugo-mwe.netlify.app/posts/classless-css-demo/][simple]] -- [[https://github.com/kevquirk/simple.css][Source]]
+- [[https://classless-bmfw--hugo-mwe.netlify.app/posts/classless-css-demo/][bettermotherf***ingwebsite]] -- [[https://gitlab.com/hugo-mwe/hugo-mwe/-/tree/classless-bmfw][Site Source]] | [[http://bettermotherfuckingwebsite.com/][CSS Source]]
+- [[https://classless-newcss--hugo-mwe.netlify.app/posts/classless-css-demo/][new.css]] -- [[https://gitlab.com/hugo-mwe/hugo-mwe/-/tree/classless-newscss][Site Source]] | [[https://github.com/xz/new.css][CSS Source]]
+- [[https://classless-sakura--hugo-mwe.netlify.app/posts/classless-css-demo/][sakura]] -- [[https://gitlab.com/hugo-mwe/hugo-mwe/-/tree/classless-sakura][Site Source]] | [[https://github.com/oxalorg/sakura][CSS Source]]
+- [[https://classless-mvp--hugo-mwe.netlify.app/posts/classless-css-demo/][mvp]] -- [[https://gitlab.com/hugo-mwe/hugo-mwe/-/tree/classless-mvp][Site Source]] | [[https://github.com/andybrewer/mvp][CSS Source]]
+- [[https://classless-water--hugo-mwe.netlify.app/posts/classless-css-demo/][water]] -- [[https://gitlab.com/hugo-mwe/hugo-mwe/-/tree/classless-water][Site Source]] | [[https://github.com/kognise/water.css][CSS Source]]
+- [[https://classless-simple--hugo-mwe.netlify.app/posts/classless-css-demo/][simple]] -- [[https://gitlab.com/hugo-mwe/hugo-mwe/-/tree/classless-simple][Site Source]] | [[https://github.com/kevquirk/simple.css][CSS Source]]
 
 * Classless CSS Demo Page                                :demo:classless:css:
 :PROPERTIES:
