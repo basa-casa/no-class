@@ -19,7 +19,8 @@ enableGitInfo = true
 [Params]
   mainSections = ["posts"]
 
-  # css = "bmfw.css" # default = "bmfw.css"
+  # css = [] # default = ["bmfw.css", "ox-hugo.css"]
+  # js = []
 
   [Params.source]
     url = "https://gitlab.com/hugo-mwe/hugo-mwe" # Mandatory
