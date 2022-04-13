@@ -13,9 +13,13 @@ enableGitInfo = true
     [markup.goldmark.renderer]
       unsafe = true
 
+  [markup.highlight]
+    style = "emacs"
+
 [Params]
-  subTitle = "Minimum working examples for testing out Hugo issues and features"
   mainSections = ["posts"]
+
+  # css = "bmfw.css" # default = "bmfw.css"
 
   [Params.source]
     url = "https://gitlab.com/hugo-mwe/hugo-mwe" # Mandatory
