@@ -20,3 +20,4 @@ enableGitInfo = true
   mainSections = ["posts"]
 
   # css = [] # default = ["bmfw.css", "ox-hugo.css"]
+  # js = []
