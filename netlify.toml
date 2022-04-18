@@ -1,9 +1,12 @@
 [context.production]
   [context.production.environment]
     HUGO_BASEURL = "https://hugo-mwe.netlify.com/"
+    HUGOxPARAMSxGITxBRANCH = "${BRANCH}"
 
 [context.branch-deploy]
   command = "hugo --baseURL ${DEPLOY_PRIME_URL}/"
+  [context.branch-deploy.environment]
+    HUGOxPARAMSxGITxBRANCH = "${BRANCH}"
 
 [context.deploy-preview]
   command = "hugo --baseURL ${DEPLOY_PRIME_URL}/"
