@@ -1,5 +1,5 @@
 [context.production]
-  command = "HUGOxPARAMSxGITxBRANCH=${BRANCH} hugo --baseURL https://hugo-mwe.netlify.com/"
+  command = "HUGOxPARAMSxGITxBRANCH=${BRANCH} hugo --baseURL https://site.basa.casa"
 
 [context.branch-deploy]
   command = "HUGOxPARAMSxGITxBRANCH=${BRANCH} hugo --baseURL ${DEPLOY_PRIME_URL}/"
